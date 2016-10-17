@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/search/result/result",
+    "pages/search/userinfo/userinfo",
+    "pages/search/battledetail/battledetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#403e3e",
+    "navigationBarTitleText": "英雄联盟",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor":"#ea8010",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "区服",
+      "iconPath": "img/info.png",
+      "selectedIconPath": "img/select_info.png"
+    }, {
+      "pagePath": "pages/search/search",
+      "text": "查询",
+      "iconPath": "img/search.png",
+      "selectedIconPath": "img/select_search.png"
+    }, {
+      "pagePath": "pages/search/userinfo/userinfo",
+      "text": "我",
+      "iconPath": "img/user.png",
+      "selectedIconPath": "img/select_user.png"
+    }]
+  },
+  "debug": true
+}

@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+    <input placeholder="请输入召唤师的名称" auto-focus/>
+</view>
