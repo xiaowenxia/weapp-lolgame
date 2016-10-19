@@ -56,8 +56,8 @@ Page({
     var angle = Math.PI * 2 / total * index
     var cos   = Math.cos(angle)
     var sin   = Math.sin(angle)
-    var tx    = x * cos - y * sin + 100
-    var ty    = x * sin + y * cos + 100
+    var tx    = x * cos - y * sin + 125
+    var ty    = x * sin + y * cos + 125
     return {
       x: tx,
       y: ty
@@ -106,20 +106,28 @@ Page({
       for(var k = 0; k < point.length; k++)
       {
         context.moveTo(pos[k].x,pos[k].y)
-        context.lineTo(100,100)
+        context.lineTo(125,125)
       }
       context.setStrokeStyle(r_color[1])
       context.stroke()
       context.closePath()
-      context.setFontSize(14)
+      
       if(r == 0)
       {
+        //
         for(var h = 0; h < point.length; h++)
           context.fillText(point[h].label, pos[h].x, pos[h].y)
       }
     }
-
-
+    context.setFontSize(18)
+    context.setStrokeStyle("red")
+    for(var h = 0; h < point.length; h++)
+    {
+      pos[h] = this.valueToPoint(125, h, point.length)
+      context.fillText(point[h].label, pos[h].x, pos[h].y)
+    }
+    context.stroke()
+          
     //调用wx.drawCanvas，通过canvasId指定在哪张画布上绘制，通过actions指定绘制行为
     wx.drawCanvas({
       canvasId: 'firstCanvas',
