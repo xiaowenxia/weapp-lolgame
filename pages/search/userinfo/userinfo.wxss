@@ -44,7 +44,6 @@
 .display {
 	display: block;
 }
-
 .content-info {
 	flew: 1;
 	display: flex;
@@ -138,4 +137,11 @@
 	flex: 3;
 	text-align:right;
 	padding-right:10px;
+}
+.canvas-abilty {
+	width: 100%;
+	heigth: 200px;
+}
+.canvas-abilty canvas {
+	margin: 0 auto;
 }

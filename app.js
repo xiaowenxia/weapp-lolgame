@@ -23,7 +23,7 @@ App({
         //this.rrrrrr()
     },
     globalData: {
-    token: "1F4AF-11808-1C81E-1F188",
+    token: "622FA-422A2-4116F-FE402",
     area: null,
     search_result: null,
     idx: 30,
@@ -76,9 +76,14 @@ App({
     //     "area_id": 7
     // }
     /* xiaxiaowen */
+    // user_default: {
+    //     "qquin": "U7999221378384908169",
+    //     "area_id": 18
+    // }
+    /* 专业坑爹20年了 钢铁烈阳 */
     user_default: {
-        "qquin": "U7999221378384908169",
-        "area_id": 18
+        "qquin": "U15815230029956674927",
+        "area_id": 17
     }
     }
 })
