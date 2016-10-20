@@ -11,7 +11,8 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#403e3e",
     "navigationBarTitleText": "英雄联盟",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "selectedColor":"#ea8010",

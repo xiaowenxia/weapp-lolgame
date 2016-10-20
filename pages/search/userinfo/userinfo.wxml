@@ -91,6 +91,24 @@
 				<canvas style="width: 250px; height: 250px;" canvas-id="firstCanvas"></canvas>
 				<!-- 当使用绝对定位时，文档流后边的canvas的显示层级高于前边的canvas-->
 			</view>
+			<view class="ability-tag">
+				<text>常用位置:</text>
+				<text style="color:#ea8010;padding-left:15px">{{recent_position[4].name}} {{recent_position[3].name}} {{recent_position[2].name}}</text>
+			</view>
+			<view class="ability-tag">
+				<text>最近常用英雄:</text>
+			</view>
+			<view>
+				<view class="ability-tag-position">
+					<block wx:for="{{recent_champion}}">
+						<view class="position-item">
+							<image src="http://cdn.tgp.qq.com/pallas/images/champions_id/{{item.champion_id}}.png"></image>
+							<text> {{item.use_num}}场</text>
+							<text>{{item.per}}%胜</text>
+						</view>
+					</block>
+				</view>
+			</view>
 		</view>
 	</view>
 </view>

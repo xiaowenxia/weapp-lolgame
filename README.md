@@ -3,6 +3,11 @@
 ### 预览
 -----
 ![](https://github.com/xiaowenxia/weapp-lolgame/blob/master/lolgame.gif)
+-----
+### 2016/10/20 更新：新增能力分析界面
+-----
+![](https://github.com/xiaowenxia/weapp-lolgame/blob/master/lolgame-ability.png)
+-----
 ### 说明
 -----
 * 本项目基于[带玩[DAIWAN]平台](http://www.games-cube.com/)提供的英雄联盟国服API数据服务。

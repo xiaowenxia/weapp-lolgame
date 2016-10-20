@@ -7,7 +7,7 @@ Page({
     area:null,
     game: []
   },
-  onLoad: function() {
+  refresh: function(){
     var that = this
     var l_token = getApp().globalData.token
     this.setData({
@@ -27,8 +27,13 @@ Page({
         })
       }
     })
-
-    
+  },
+  onLoad: function() {
+    this.refresh()
+  },
+  onPullDownRefresh () {
+    this.refresh()
+    wx.stopPullDownRefresh()
   }
   
 })

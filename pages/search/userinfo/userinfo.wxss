@@ -27,13 +27,13 @@
 	flew: 1;
 	display: flex;
 	flex-direction: row;
-	font-size: 20px;
+	font-size: 16px;
 }
 .profile-tab-sub {
 	width:30%;
 	border:1px solid #d2d2d2;
 	position: relative;
-	padding:.7rem .3rem;
+	padding:.5rem .3rem;
 	text-align: center;
 	z-index: 10;
 }
@@ -144,4 +144,30 @@
 }
 .canvas-abilty canvas {
 	margin: 0 auto;
+}
+.ability-tag {
+	border-left: 3px solid #ea8010;
+	padding-left: 10px;
+	margin: 20px 0;
+}
+.ability-tag-position {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	heigth: 60px;
+}
+.position-item {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+.position-item image {
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	margin:0 auto;
+}
+.position-item text {
+	display: block;
+	text-align: center;
 }
