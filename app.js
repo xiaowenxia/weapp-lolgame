@@ -23,7 +23,7 @@ App({
         //this.rrrrrr()
     },
     globalData: {
-    token: "6E51A-C7DA1-C9659-8CA75",
+    token: "24111-863C6-BF416-B44B6",
     area: null,
     search_result: null,
     idx: 30,
@@ -80,10 +80,15 @@ App({
     //     "qquin": "U7999221378384908169",
     //     "area_id": 18
     // }
-    /* 专业坑爹20年了 钢铁烈阳 */
+    // /* 专业坑爹20年了 钢铁烈阳 */
+    // user_default: {
+    //     "qquin": "U15815230029956674927",
+    //     "area_id": 17
+    // }
+    /* 专业坑爹20年了 卡拉曼达 */
     user_default: {
-        "qquin": "U15815230029956674927",
-        "area_id": 17
+        "qquin": "U14289356289420285104",
+        "area_id": 25
     }
     }
 })

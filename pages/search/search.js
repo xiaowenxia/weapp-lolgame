@@ -5,7 +5,16 @@ Page({
     token:null,
     search_name:"恶人谷丶小霸王",
     loading:false,
-    toastHidden:true
+    toastHidden:true,
+    paper_item: [[{"tag":"召唤师查询","img":"../../img/paper/search.png"},
+                  {"tag":"英雄资料","img":"../../img/paper/hero.png"},
+                  {"tag":"周免英雄","img":"../../img/paper/hero_free.png"}],
+                 [{"tag":"排行榜","img":"../../img/paper/rank.png"},
+                  {"tag":"物品信息","img":"../../img/paper/item.png"},
+                  {"tag":"大区数据","img":"../../img/paper/area.png"}],
+                 [{"tag":"没有","img":"../../img/paper/item1.png"},
+                  {"tag":"没有","img":"../../img/paper/item2.png"},
+                  {"tag":"没有","img":"../../img/paper/item3.png"}]]
   },
   toastChange: function() {
     this.setData({
