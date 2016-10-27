@@ -2,10 +2,8 @@
 var app = getApp()
 Page({
   data: {
-    token:null,
-    search_name:"xiaxiaowen",
-    loading:false,
-    toastHidden:true
+    token: "656AE-24A3A-66426-4A479",
+    toastHidden:true,
   },
   toastChange: function() {
     this.setData({
@@ -51,9 +49,25 @@ Page({
     })
   },
   onLoad: function() {
+    var that = this
     this.setData({
       token: app.globalData.token
     })
+    wx.request({
+      url: 'http://lolapi.games-cube.com/champion',
+      type: "GET",
+      header: {
+          "DAIWAN-API-TOKEN": this.data.token
+      },
+      success: function(res) {
+        console.log(JSON.stringify(res))
+        
+        that.setData({
+          champions: res.data.data
+        })
+      }
+    })
+
+    
   }
-  
 })

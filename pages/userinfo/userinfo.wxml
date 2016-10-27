@@ -67,7 +67,7 @@
 			<view class="content-info-history">
 				<view class="history-header">我的战绩</view>
 				<block wx:for="{{combat_list[0].battle_list}}">
-					<navigator url="../battledetail/battledetail?qquin={{qquin}}&area_id={{area_id}}&game_id={{item.game_id}}" >
+					<navigator url="battledetail/battledetail?qquin={{qquin}}&area_id={{area_id}}&game_id={{item.game_id}}" >
 						<view class="history-content">
 							<view class="history-content-img">
 								<image src="http://cdn.tgp.qq.com/pallas/images/champions_id/{{combat_list[0].battle_list[index].champion_id}}.png" background-size="cover" />

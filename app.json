@@ -1,11 +1,12 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/user/user",
-    "pages/search/search",
-    "pages/search/result/result",
-    "pages/search/userinfo/userinfo",
-    "pages/search/battledetail/battledetail"
+    "pages/data/data",
+    "pages/data/search/search",
+    "pages/data/search/result/result",
+    "pages/data/hero/hero",
+    "pages/userinfo/userinfo",
+    "pages/userinfo/battledetail/battledetail"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -22,12 +23,12 @@
       "iconPath": "img/tab/video.png",
       "selectedIconPath": "img/tab/video_checked.png"
     }, {
-      "pagePath": "pages/search/search",
-      "text": "查询",
+      "pagePath": "pages/data/data",
+      "text": "数据库",
       "iconPath": "img/tab/discovery.png",
       "selectedIconPath": "img/tab/discovery_checked.png"
     }, {
-      "pagePath": "pages/search/userinfo/userinfo",
+      "pagePath": "pages/userinfo/userinfo",
       "text": "我",
       "iconPath": "img/tab/user.png",
       "selectedIconPath": "img/tab/user_checked.png"

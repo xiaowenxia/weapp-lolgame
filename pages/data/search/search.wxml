@@ -5,12 +5,5 @@
         <input placeholder="请输入召唤师的名称" bindinput="bindSearchInput" class="input-container"/>
         <button size="default" type="primary" loading="{{loading}}" bindtap="bindSearchTap" >查询</button>
     </view>
-    <view class="paper">
-    	<view class="paper-column" wx:for="{{paper_item}}">
-    		<view class="paper-item" wx:for="{{item}}" wx:for-item="j">
-    			<image class="paper-item-img" src="{{j.img}}"></image>
-    			<view class="paper-item-text">{{j.tag}}</view>
-    		</view>
-    	</view>
-    </view>
+    
 </view>
