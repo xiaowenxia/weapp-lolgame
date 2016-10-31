@@ -10,7 +10,7 @@
 -----
 ### 2016/10/31 更新：新增所有英雄资料页面，并增加模糊查询功能
 -----
-![](https://github.com/xiaowenxia/weapp-lolgame/blob/master/lolgame-fuzzy.png)
+![](https://github.com/xiaowenxia/weapp-lolgame/blob/master/lolgame-fuzzy.gif)
 -----
 ### 说明
 -----
