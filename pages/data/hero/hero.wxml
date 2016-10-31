@@ -3,10 +3,10 @@
     <toast hidden="{{toastHidden}}" icon="info" bindchange="toastChange">名称不能为空</toast>
     <view class="input-section">
         <input placeholder="请输入英雄名称" bindinput="bindSearchInput" class="input-container"/>
-        <button>取消</button>
+        <button class="{{display}}">取消</button>
     </view>
     <view class="heroes">
-        <block wx:for="{{champions}}">
+        <block wx:for="{{display_champions}}">
             <view class="heroes-row">
                 <navigator>
                     <view class="heroes-row-in">

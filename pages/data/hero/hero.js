@@ -1,9 +1,16 @@
 //获取应用实例
 var app = getApp()
+var fuzzy = require('../../../utils/fuzzy.js')
 Page({
   data: {
-    token: "656AE-24A3A-66426-4A479",
     toastHidden:true,
+    display:"hidden",
+    search_name: "",
+    champions: [],
+    display_champions: [],
+    ename: [],
+    title: [],
+    cname: []
   },
   toastChange: function() {
     this.setData({
@@ -14,6 +21,30 @@ Page({
     this.setData({
       search_name:e.detail.value
     })
+    if(e.detail.value == null || e.detail.value == "")
+    {
+      this.setData({
+        display:"hidden"
+      })
+    }
+    else
+    {
+      this.setData({
+        display:"display"
+      })
+      var options = {extract: function(el) {return el.ename+el.title+el.cname}}
+      var f = fuzzy.filter(this.data.search_name, this.data.champions, options)
+      //console.log(JSON.stringify(f))
+      var display_champions = []
+      for(var i = 0; i < f.length; i++)
+      {
+        display_champions.push(this.data.champions[f[i].index])
+      }
+      this.setData({
+        display_champions:display_champions
+      })
+    }
+    
   },
   //事件处理函数
   bindSearchTap: function() {
@@ -27,9 +58,7 @@ Page({
       })
       return
     }
-    that.setData({
-      loading:true
-    })
+    
     wx.request({
       url: 'http://lolapi.games-cube.com/UserArea?keyword='+this.data.search_name,
       type: "GET",
@@ -60,10 +89,23 @@ Page({
           "DAIWAN-API-TOKEN": this.data.token
       },
       success: function(res) {
-        console.log(JSON.stringify(res))
-        
+        //console.log(JSON.stringify(res))
+        var i = 0
+        var ename = []
+        var title = []
+        var cname = []
+        for(i=0;i<res.data.data.length;i++)
+        {
+          ename[i] = res.data.data[i].ename
+          title[i] = res.data.data[i].title
+          cname[i] = res.data.data[i].cname
+        }
         that.setData({
-          champions: res.data.data
+          champions: res.data.data,
+          display_champions: res.data.data,
+          ename: ename,
+          title: title,
+          cname: cname
         })
       }
     })

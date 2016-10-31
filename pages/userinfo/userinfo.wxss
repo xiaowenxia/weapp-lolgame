@@ -41,9 +41,6 @@
 	color: #ea8010;
 	border-bottom: 0;
 }
-.display {
-	display: block;
-}
 .content-info {
 	flew: 1;
 	display: flex;
@@ -51,9 +48,6 @@
 	text-align: center;
 	font-size: 14px;
 	height: 100px;
-}
-.hidden {
-	display: none;
 }
 /*段位*/
 .content-info-division {

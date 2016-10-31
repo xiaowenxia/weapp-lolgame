@@ -5,6 +5,12 @@
   justify-content: space-between;
   box-sizing: border-box;
 }
+.hidden {
+    display: none;
+}
+.display {
+    display: block;
+}
 .widgets__item{
     margin-top: 10px;
     margin-bottom: 10px;
