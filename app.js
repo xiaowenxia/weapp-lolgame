@@ -23,7 +23,7 @@ App({
         //this.rrrrrr()
     },
     globalData: {
-    token: "F94BB-FEEF3-E9992-3FFE9",
+    token: "8BBCB-4452B-A92C4-F99CF",
     area: null,
     search_result: null,
     idx: 30,

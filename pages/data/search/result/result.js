@@ -14,9 +14,6 @@ Page({
     })
 
   },
-  bindrouterTap: function() {
-    console.log("fdsafdsa")
-  },
   onLoad: function() {
     this.setData({
       result: app.globalData.search_result.data.data,

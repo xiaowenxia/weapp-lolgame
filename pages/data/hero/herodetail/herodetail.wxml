@@ -8,7 +8,7 @@
     <view class="heroes">
         <block wx:for="{{display_champions}}">
             <view class="heroes-row">
-                <navigator url="herodetail/herodetail?champion_id={{item.id}}">
+                <navigator>
                     <view class="heroes-row-in">
                         <image src="http://cdn.tgp.qq.com/pallas/images/champions_id/{{item.id}}.png"></image>
                         <view class="one-tag">

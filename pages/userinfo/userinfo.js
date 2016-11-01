@@ -91,7 +91,7 @@ Page({
       /* 外围一圈绘制标签 */
       if(r == 0)
       {
-        context.setFontSize(10)
+        context.setFontSize(12)
         for(var h = 0; h < point.length; h++)
         {
           /* 坐标偏移，否则看起来有偏差 */

@@ -4,7 +4,12 @@
     "pages/data/data",
     "pages/data/search/search",
     "pages/data/search/result/result",
+    "pages/data/rank/rank",
+    "pages/data/rank/rankdetail/rankdetail",
     "pages/data/hero/hero",
+    "pages/data/hero/herodetail/herodetail",
+    "pages/data/hero_free/hero_free",
+    "pages/data/area/area",
     "pages/userinfo/userinfo",
     "pages/userinfo/battledetail/battledetail"
   ],
