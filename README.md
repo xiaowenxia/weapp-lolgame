@@ -12,6 +12,8 @@
 -----
 ![](https://github.com/xiaowenxia/weapp-lolgame/blob/master/lolgame-fuzzy.gif)
 -----
+### 2016/11/1 更新：新增Rank排行榜查询
+-----
 ### 说明
 -----
 * 本项目基于[带玩[DAIWAN]平台](http://www.games-cube.com/)提供的英雄联盟国服API数据服务。使用的token（用于获取API数据）是免费的，有效期为1天，所以如果有需要的话，请登录[带玩[DAIWAN]平台](http://www.games-cube.com/)获取token。
