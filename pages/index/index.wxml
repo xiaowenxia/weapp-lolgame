@@ -1,9 +1,18 @@
-<!--index.wxml-->
 <view class="container">
-  <block wx:for="{{area}}">
-  	<view class="widgets__info">
-	    <text class="widgets__info-name">{{item.isp}}</text>
-	    <text class="widgets__info-area">{{item.name}}</text>
-		</view>
-  </block>
+	<view class="video-menu">
+	    <scroll-view scroll-x="true" class="top-nav">
+	    	<block wx:for="{{tab}}">
+		        <view bindtap="toTab" data-index="{{item.idx}}" class="top-btn {{item.hover}}">{{item.title}}</view>
+	        </block>
+	    </scroll-view>
+	</view>
+	<view class="{{tab[0].content}}">
+		<swiper>
+		  <block wx:for-items="{{imgUrls}}">
+		    <swiper-item>
+		      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+		    </swiper-item>
+		  </block>
+		</swiper>
+	</view>
 </view>

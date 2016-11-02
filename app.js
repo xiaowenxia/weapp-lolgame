@@ -23,7 +23,8 @@ App({
         //this.rrrrrr()
     },
     globalData: {
-    token: "8BBCB-4452B-A92C4-F99CF",
+    token: "0C244-44C9C-49434-464BA",
+    token_video: "AE9C6-A6692-9CE6F-96667", 
     area: null,
     search_result: null,
     idx: 30,
@@ -60,7 +61,8 @@ App({
     {"name":"佣兵战"},
     {"name":"未知比赛类型"},
     {"name":"未知比赛类型"},
-    {"name":"无限乱斗"}],
+    {"name":"无限乱斗"},
+    {"name":"末日人工智能"}],
     win: {
       "name":["未定义","胜利","失败"],
       "color":["red","green","red"]

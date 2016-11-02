@@ -39,5 +39,5 @@
       "selectedIconPath": "img/tab/user_checked.png"
     }]
   },
-  "debug": true
+  "debug": "true"
 }

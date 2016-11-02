@@ -10,6 +10,7 @@
 -----
 ### 2016/10/31 更新：新增所有英雄资料页面，并增加模糊查询功能
 -----
+模糊查询的算法使用了这位大神的算法：[fuzzy](https://github.com/mattyork/fuzzy)
 ![](https://github.com/xiaowenxia/weapp-lolgame/blob/master/lolgame-fuzzy.gif)
 -----
 ### 2016/11/1 更新：新增Rank排行榜查询
