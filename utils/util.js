@@ -53,8 +53,14 @@ function TimeDiff(date1, date2) {
     }
     return time
 }
+function GetURL(message){
+   var reg =  /(http[s]?:\/\/([\w-]+.)+([:\d+])?(\/[\w-\.\/\?%&=]*)?)/gi;
+   var done_message = message.match(reg);
+   return done_message[0]
+}
 module.exports = {
   formatTime: formatTime,
   stringToDate: stringToDate,
-  TimeDiff: TimeDiff
+  TimeDiff: TimeDiff,
+  GetURL: GetURL
 }

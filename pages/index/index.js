@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 var app = getApp()
-var DateOpt = require("../../utils/util.js")
+var utils = require("../../utils/util.js")
 Page({
   data: {
     token:null,
@@ -33,6 +33,10 @@ Page({
           tab: tab
       });
   },
+  playTap: function(event){
+      app.globalData.video_path = event.currentTarget.dataset.path
+
+    },
   refresh: function(){
     var that = this
     this.setData({
@@ -50,6 +54,7 @@ Page({
         app.globalData.area = res.data.data
       }
     })
+
     wx.request({
       url: 'http://infoapi.games-cube.com/GetNewstVideos?p=1',
       type: "GET",
@@ -63,8 +68,8 @@ Page({
         {
           var date = latest[i].createdate
           date = date.replace(/T/," ")
-          var date_video = DateOpt.stringToDate(date)
-          var date_diff = DateOpt.TimeDiff(date_video, date_now)
+          var date_video = utils.stringToDate(date)
+          var date_diff = utils.TimeDiff(date_video, date_now)
           if(date_diff.days){
             latest[i].time = date_diff.days+"天以前"
             latest[i].new = false
@@ -74,8 +79,13 @@ Page({
             latest[i].new = true
           }
           else
+          {
             latest[i].time = "1小时以前"
             latest[i].new = true
+          }
+          var get_url = utils.GetURL(latest[i].content)
+          get_url = get_url.substring(0,get_url.length-1)
+          latest[i].get_url = get_url
         }
         that.setData({
           latest:  latest

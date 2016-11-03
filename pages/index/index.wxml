@@ -10,7 +10,8 @@
 		<block wx:for="{{latest}}">
 
             <view class="video-row">
-                <navigator url="play/play?path={{item.id}}">
+                <!--这里不能直接传视频路径到url的参数中，因为视频路径中也带参数，会被解析成url的参数-->
+                <navigator url="play/play" data-path="{{item.get_url}}" bindtap="playTap">
                     <view class="video-row-in">
                         <image class="video-row-in-img" src="{{item.img}}"></image>
 					    <image class="video-new" src="../../img/video_new.png"></image>

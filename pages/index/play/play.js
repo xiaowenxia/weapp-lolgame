@@ -1,94 +1,23 @@
 //index.js
 //获取应用实例
 var app = getApp()
-var DateOpt = require("../../utils/util.js")
+var DateOpt = require("../../../utils/util.js")
 Page({
   data: {
     token:null,
     token_video: null,
-    video_latest: null,
-    tab:[
-      {"idx":0,"hover":'top-hoverd-btn','title':"最新","content":"display"},
-      {"idx":1,"hover":'','title':"英雄视频","content":"hidden"},
-      {"idx":2,"hover":'','title':"解说","content":"hidden"},
-      {"idx":3,"hover":'','title':"查询","content":"hidden"},
-    ]
+    
   },
-  toTab: function(event){
-      var index = parseInt(event.target.dataset.index)
-      //console.log(index)
-      var tolatest = '',tohero='',toauthor='',tosearch=''
-      var tab = this.data.tab
-      for(var i = 0; i < tab.length; i++)
-      {
-        tab[i].hover = ''
-        tab[i].content = 'hidden'
-        if(index == tab[i].idx)
-        {
-          tab[i].hover = 'top-hoverd-btn'
-          tab[i].content = 'display'
-        }
-      }
-      this.setData({
-          tab: tab
-      });
-  },
-  refresh: function(){
-    var that = this
-    this.setData({
-      token_video: app.globalData.token_video,
-      token: app.globalData.token
-    })
-
-    wx.request({
-      url: 'http://lolapi.games-cube.com/Area',
-      type: "GET",
-      header: {
-          "DAIWAN-API-TOKEN": this.data.token
-      },
-      success: function(res) {
-        app.globalData.area = res.data.data
-      }
-    })
-    wx.request({
-      url: 'http://infoapi.games-cube.com/GetNewstVideos?p=1',
-      type: "GET",
-      header: {
-          "DAIWAN-API-TOKEN": this.data.token_video
-      },
-      success: function(res) {
-        var latest = res.data.data
-        var date_now = new Date()
-        for(var i = 0; i < latest.length; i++)
-        {
-          var date = latest[i].createdate
-          date = date.replace(/T/," ")
-          var date_video = DateOpt.stringToDate(date)
-          var date_diff = DateOpt.TimeDiff(date_video, date_now)
-          if(date_diff.days){
-            latest[i].time = date_diff.days+"天以前"
-            latest[i].new = false
-          }
-          else if(date_diff.hours){
-            latest[i].time = date_diff.hours+"小时以前"
-            latest[i].new = true
-          }
-          else
-            latest[i].time = "1小时以前"
-            latest[i].new = true
-        }
-        that.setData({
-          latest:  latest
-        })
-      }
-    })
+  videoErrorCallback: function (e) {
+      console.log('视频错误信息:');
+      console.log(e.detail.errMsg);
   },
   onLoad: function() {
-    this.refresh()
-  },
-  onPullDownRefresh () {
-    this.refresh()
-    wx.stopPullDownRefresh()
+    this.setData({
+      token_video: app.globalData.token_video,
+      token: app.globalData.token,
+      path: app.globalData.video_path
+    })
   }
   
 })

@@ -1,30 +1,5 @@
 <view class="container">
-	<view class="video-menu">
-	    <scroll-view scroll-x="true" class="top-nav">
-	    	<block wx:for="{{tab}}">
-		        <view bindtap="toTab" data-index="{{item.idx}}" class="top-btn {{item.hover}}">{{item.title}}</view>
-	        </block>
-	    </scroll-view>
-	</view>
-	<view class="video {{tab[0].content}}">
-		<block wx:for="{{latest}}">
-
-            <view class="video-row">
-                <navigator url="herodetail/herodetail?champion_id={{item.id}}">
-                    <view class="video-row-in">
-                        <image class= "video-row-in-img" src="{{item.img}}"></image>
-                       
-					    	<image class="video-new" src="../../img/video_new.png"></image>
-					   
-                        <view class="one-tag">
-                            <text class="one-tag-title">{{item.title}}</text>
-                            <text class="one-tag-name">{{item.cname}}</text>
-                            <text class="one-tag-pos">{{item.ename}}</text>
-                        </view>
-                    </view>
-                </navigator>
-            </view>
-
-        </block>
+	<view class="video">
+	    <video src="{{path}}" binderror="videoErrorCallback"></video>
 	</view>
 </view>
