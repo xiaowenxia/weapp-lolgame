@@ -1,19 +1,21 @@
-var https = require('https');
-var fs = require('fs');
-var cert = fs.readFileSync('./cert/chyingp-cert.pem');
-
+var http = require('http');
 var options = {
-	hostname: 'www.chyingp.com',
-	port: '3000',
-	path: '/',
-	// ca: [cert]
-	// rejectUnauthorized: false
+    protocol: 'http:',
+    hostname: 'id.qq.com',
+    port: '80',
+    path: '/',
+    method: 'GET'
 };
 
-var req = https.request(options, function(res){
-	res.pipe(process.stdout);
+var client = http.request(options, function(res){
+    var data = '';
+    res.setEncoding('utf8');
+    res.on('data', function(chunk){
+        data += chunk;
+    });
+    res.on('end', function(){
+        console.log(data);
+    });
 });
-req.on('error', function(error){
-	console.log(error.code);
-});
-req.end();
+
+client.end();

@@ -16,24 +16,26 @@ var options = {
 
 server.listen(3000);
 */
+
 var options = {
-    "method": "GET",
-    "headers": {
+    hostname: 'lolapi.games-cube.com',
+    port: '80',
+    path: '/Area',
+    method: 'GET',
+    headers: {
         "DAIWAN-API-TOKEN": "84462-B8237-46CD6-52526"
     }
 };
 
-var req = http.request(options, function(res) {
-    var chunks = [];
-
-    res.on("data", function(chunk) {
-        chunks.push(chunk);
+var client = http.request(options, (res) => {
+    var data = '';
+    res.setEncoding('utf8');
+    res.on('data', (chunk) => {
+        data += chunk;
     });
-
-    res.on("end", function() {
-        var body = Buffer.concat(chunks);
-        console.log(body.toString());
+    res.on('end', () => {
+        console.log(data);
     });
 });
 
-// openssl x509 -req -in chyingp-csr.pem -signkey chyingp-key.pem -out chyingp-cert.pem
+client.end();
