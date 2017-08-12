@@ -49,7 +49,7 @@ Page({
     
     wx.request({
 
-      url: 'http://lolapi.games-cube.com/GameDetail?qquin='+this.data.qquin+'&vaid='+this.data.area_id+'&gameid='+this.data.game_id,
+      url: 'https://www.xiaxiaowen.top/GameDetail?qquin='+this.data.qquin+'&vaid='+this.data.area_id+'&gameid='+this.data.game_id,
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token

@@ -3,7 +3,7 @@ App({
     rrrrrr: function () {
         var that = this
         wx.request({
-          url: 'http://lolapi.games-cube.com/GetSummonSpellIcon?summonspellid='+that.globalData.idx,
+          url: 'https://www.xiaxiaowen.top/GetSummonSpellIcon?summonspellid='+that.globalData.idx,
           type: "GET",
           header: {
               "DAIWAN-API-TOKEN": this.globalData.token

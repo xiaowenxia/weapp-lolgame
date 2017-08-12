@@ -60,7 +60,7 @@ Page({
     }
     
     wx.request({
-      url: 'http://lolapi.games-cube.com/UserArea?keyword='+this.data.search_name,
+      url: 'https://www.xiaxiaowen.top/UserArea?keyword='+this.data.search_name,
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token
@@ -83,7 +83,7 @@ Page({
       token: app.globalData.token
     })
     wx.request({
-      url: 'http://lolapi.games-cube.com/champion',
+      url: 'https://www.xiaxiaowen.top/champion',
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token

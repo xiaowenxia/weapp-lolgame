@@ -10,7 +10,7 @@ Page({
       champion_id: options.champion_id
     })
     wx.request({
-      url: 'http://lolapi.games-cube.com/GetChampionDetail?champion_id='+this.data.champion_id,
+      url: 'https://www.xiaxiaowen.top/GetChampionDetail?champion_id='+this.data.champion_id,
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token

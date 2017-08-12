@@ -42,7 +42,7 @@ Page({
       loading:true
     })
     wx.request({
-      url: 'http://lolapi.games-cube.com/UserArea?keyword='+this.data.search_name,
+      url: 'https://www.xiaxiaowen.top/UserArea?keyword='+this.data.search_name,
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token

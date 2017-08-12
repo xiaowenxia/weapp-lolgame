@@ -45,7 +45,7 @@ Page({
     })
 
     wx.request({
-      url: 'http://lolapi.games-cube.com/Area',
+      url: 'https://www.xiaxiaowen.top/Area',
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token
@@ -55,13 +55,12 @@ Page({
       }
     })
 
+    console.log("get NewstVideos")
     wx.request({
-      url: 'http://infoapi.games-cube.com/GetNewstVideos?p=1',
+      url: 'https://www.xiaxiaowen.top/GetNewstVideos?p=1',
       type: "GET",
-      header: {
-          "DAIWAN-API-TOKEN": this.data.token_video
-      },
       success: function(res) {
+        console.log("get NewstVideos success")
         var latest = res.data.data
         var date_now = new Date()
         for(var i = 0; i < latest.length; i++)
@@ -90,6 +89,9 @@ Page({
         that.setData({
           latest:  latest
         })
+      },
+      fail: function() {
+        console.log("request 失败")
       }
     })
   },

@@ -187,7 +187,7 @@ Page({
       })
     }
     wx.request({
-      url: 'http://lolapi.games-cube.com/UserHotInfo?qquin='+this.data.qquin+'&vaid='+this.data.area_id,
+      url: 'https://www.xiaxiaowen.top/UserHotInfo?qquin='+this.data.qquin+'&vaid='+this.data.area_id,
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token
@@ -200,7 +200,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://lolapi.games-cube.com/UserExtInfo?qquin='+this.data.qquin+'&vaid='+this.data.area_id,
+      url: 'https://www.xiaxiaowen.top/UserExtInfo?qquin='+this.data.qquin+'&vaid='+this.data.area_id,
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token
@@ -296,7 +296,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://lolapi.games-cube.com/CombatList?qquin='+this.data.qquin+'&vaid='+this.data.area_id+'&p=0',
+      url: 'https://www.xiaxiaowen.top/CombatList?qquin='+this.data.qquin+'&vaid='+this.data.area_id+'&p=0',
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token

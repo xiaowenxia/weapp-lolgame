@@ -19,6 +19,7 @@ app.all('*', function (req, res, next) {
     next();
 });
 
+/* 代理所有带玩数据API */
 config.apiDataList.forEach((e) => {
     app.get(e, function(req, res){
         //console.log(req);
@@ -29,6 +30,7 @@ config.apiDataList.forEach((e) => {
     });
 })
 
+/* 代理所有带玩视频API */
 config.apiVideoList.forEach((e) => {
     app.get(e, function(req, res){
         //console.log(req);
@@ -39,6 +41,7 @@ config.apiVideoList.forEach((e) => {
     });
 })
 
+/* 启动https */
 var options = {
     key: fs.readFileSync(config.httpsKeyFile),
     cert: fs.readFileSync(config.httpsCertFile)

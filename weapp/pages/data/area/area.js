@@ -15,7 +15,7 @@ Page({
     })
 
     wx.request({
-      url: 'http://lolapi.games-cube.com/Area',
+      url: 'https://www.xiaxiaowen.top/Area',
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": l_token

@@ -12,7 +12,7 @@ Page({
       token: app.globalData.token
     })
     wx.request({
-      url: 'http://lolapi.games-cube.com/Free',
+      url: 'https://www.xiaxiaowen.top/Free',
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token

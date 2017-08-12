@@ -14,10 +14,13 @@ const api_video = [
 ];
 
 const config = {
+    /* 带玩的API地址 */
     gameCubedataHost: 'lolapi.games-cube.com',
     gameCubevideoHost: 'infoapi.games-cube.com',
+    /* 带玩API TOKEN */
     dataToken: 'AFF64-826A6-2A788-838CB',
     videoToken: '81945-A67C4-90496-1E976',
+    /* https秘钥和证书 */
     httpsKeyFile: './cert/chyingp-key.pem',
     httpsCertFile:'./cert/chyingp-cert.pem',
     apiDataList: api_data,

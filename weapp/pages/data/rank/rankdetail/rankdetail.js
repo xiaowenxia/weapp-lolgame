@@ -11,7 +11,7 @@ Page({
       champion:options.champion_id
     })
     wx.request({
-      url: 'http://lolapi.games-cube.com/ChampionRank?championid='+this.data.champion+'&p=1',
+      url: 'https://www.xiaxiaowen.top/ChampionRank?championid='+this.data.champion+'&p=1',
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token
