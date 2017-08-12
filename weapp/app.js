@@ -23,8 +23,8 @@ App({
         //this.rrrrrr()
     },
     globalData: {
-    token: "FF298-D9B3C-F0906-2F4C1",
-    token_video: "E59B4-43534-72EA6-A34A4", 
+      token: "AFF64-826A6-2A788-838CB",
+      token_video: "81945-A67C4-90496-1E976", 
     area: null,
     search_result: null,
     idx: 30,

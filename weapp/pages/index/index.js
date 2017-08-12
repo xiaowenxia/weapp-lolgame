@@ -56,7 +56,7 @@ Page({
     })
 
     wx.request({
-      url: 'https://www.xiaxiaowen.top/GetNewstVideos?p=1',
+      url: 'http://infoapi.games-cube.com/GetNewstVideos?p=1',
       type: "GET",
       header: {
           "DAIWAN-API-TOKEN": this.data.token_video
